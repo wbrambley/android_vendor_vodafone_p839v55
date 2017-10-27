@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Prebuilt libraries that are needed to build open-source libraries
-PRODUCT_COPY_FILES := vendor/vodafone/p839v55/proprietary/vendor/lib/libtime_genoff.so:obj/lib/libtime_genoff.so
+#PRODUCT_COPY_FILES := vendor/vodafone/p839v55/proprietary/vendor/lib/libtime_genoff.so:obj/lib/libtime_genoff.so
 
 #removed for test#
 #    vendor/vodafone/p839v55/proprietary/lib/hw/sensors.msm8916.so:system/lib/hw/sensors.msm8916.so \    
@@ -22,6 +22,15 @@ PRODUCT_COPY_FILES := vendor/vodafone/p839v55/proprietary/vendor/lib/libtime_gen
 #    vendor/vodafone/p839v55/proprietary/vendor/etc/calmodule.cfg:system/vendor/etc/calmodule.cfg \
 #    vendor/vodafone/p839v55/proprietary/vendor/lib/libcalmodule_akm.so:system/vendor/lib/libcalmodule_akm.so \
 #    vendor/vodafone/p839v55/proprietary/vendor/lib/libcalmodule_common.so:system/vendor/lib/libcalmodule_common.so \
+#    vendor/vodafone/p839v55/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
+#    vendor/vodafone/p839v55/proprietary/priv-app/CNEService:system/priv-app/CNEService \
+#    vendor/vodafone/p839v55/proprietary/priv-app/CNEService/CNEService.apk:system/priv-app/CNEService/CNEService.apk \
+#    vendor/vodafone/p839v55/proprietary/priv-app/com.qualcomm.location:system/priv-app/com.qualcomm.location \
+#    vendor/vodafone/p839v55/proprietary/priv-app/com.qualcomm.location/com.qualcomm.location.apk:system/priv-app/com.qualcomm.location/com.qualcomm.location.apk \
+#    vendor/vodafone/p839v55/proprietary/priv-app/com.qualcomm.location.ext:system/priv-app/com.qualcomm.location.ext \
+#    vendor/vodafone/p839v55/proprietary/priv-app/com.qualcomm.location.ext/com.qualcomm.location.ext.apk:system/priv-app/com.qualcomm.location.ext/com.qualcomm.location.ext.apk \
+#    vendor/vodafone/p839v55/proprietary/framework/qcnvitems.jar:system/framework/qcnvitems.jar \
+#    vendor/vodafone/p839v55/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
 
 PRODUCT_COPY_FILES += \
     vendor/vodafone/p839v55/proprietary/vendor/lib/libcalmodule_akm.so:system/vendor/lib/libcalmodule_akm.so \
@@ -747,8 +756,6 @@ PRODUCT_COPY_FILES += \
     vendor/vodafone/p839v55/proprietary/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb:system/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb \
     vendor/vodafone/p839v55/proprietary/etc/acdbdata/QRD/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
     vendor/vodafone/p839v55/proprietary/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb \
-    vendor/vodafone/p839v55/proprietary/etc/cne/andsfCne.xml:system/etc/cne/andsfCne.xml \
-    vendor/vodafone/p839v55/proprietary/etc/cne/SwimConfig.xml:system/etc/cne/SwimConfig.xml \
     vendor/vodafone/p839v55/proprietary/etc/cacert_location.pem:system/etc/cacert_location.pem \
     vendor/vodafone/p839v55/proprietary/etc/dpm/nsrm/NsrmConfiguration.xml:system/etc/dpm/nsrm/NsrmConfiguration.xml \
     vendor/vodafone/p839v55/proprietary/etc/capability.xml:system/etc/capability.xml \
@@ -775,26 +782,37 @@ PRODUCT_COPY_FILES += \
     vendor/vodafone/p839v55/proprietary/etc/firmware/venus.b04:system/etc/firmware/venus.b04 \
     vendor/vodafone/p839v55/proprietary/etc/firmware/venus.mbn:system/etc/firmware/venus.mbn \
     vendor/vodafone/p839v55/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt \
+    vendor/vodafone/p839v55/proprietary/etc/lowi.conf:system/etc/lowi.conf \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/com.gsma.services.nfc.xml:system/etc/permissions/com.gsma.services.nfc.xml \
+    vendor/vodafone/p839v55/proprietary/framework/com.gsma.services.nfc.jar:system/framework/com.gsma.services.nfc.jar \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
+    vendor/vodafone/p839v55/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
+    vendor/vodafone/p839v55/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
+    vendor/vodafone/p839v55/proprietary/etc/permissions/com.qualcomm.location.vzw_library.xml:system/etc/permissions/com.qualcomm.location.vzw_library.xml \
+    vendor/vodafone/p839v55/proprietary/framework/com.qualcomm.location.vzw_library.jar:system/framework/com.qualcomm.location.vzw_library.jar \
+    vendor/vodafone/p839v55/proprietary/etc/xtra_root_cert.pem:system/etc/xtra_root_cert.pem \
+    vendor/vodafone/p839v55/proprietary/etc/xtwifi.conf:system/etc/xtwifi.conf \
+    vendor/vodafone/p839v55/proprietary/lib/modules/core_ctl.ko:system/lib/modules/core_ctl.ko \
+    vendor/vodafone/p839v55/proprietary/lib/modules/modules.dep.bb:system/lib/modules/modules.dep.bb \
+    vendor/vodafone/p839v55/proprietary/lib/modules/wlan.ko:system/lib/modules/wlan.ko \
+    vendor/vodafone/p839v55/proprietary/lib/modules/pronto/pronto_wlan.ko:system/lib/modules/pronto/pronto_wlan.ko \
     vendor/vodafone/p839v55/proprietary/etc/firmware/wlan:system/etc/firmware/wlan \
     vendor/vodafone/p839v55/proprietary/etc/firmware/wlan/prima:system/etc/firmware/wlan/prima \
     vendor/vodafone/p839v55/proprietary/etc/firmware/wlan/prima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     vendor/vodafone/p839v55/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     vendor/vodafone/p839v55/proprietary/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat:system/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat \
-    vendor/vodafone/p839v55/proprietary/etc/lowi.conf:system/etc/lowi.conf \
-    vendor/vodafone/p839v55/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
-    vendor/vodafone/p839v55/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
-    vendor/vodafone/p839v55/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
-    vendor/vodafone/p839v55/proprietary/etc/xtra_root_cert.pem:system/etc/xtra_root_cert.pem \
-    vendor/vodafone/p839v55/proprietary/etc/xtwifi.conf:system/etc/xtwifi.conf \
-    vendor/vodafone/p839v55/proprietary/framework/qcnvitems.jar:system/framework/qcnvitems.jar \
+    vendor/vodafone/p839v55/proprietary/lib/modules/radio-iris-transport.ko:system/lib/modules/radio-iris-transport.ko \
     vendor/vodafone/p839v55/proprietary/framework/qcom.fmradio.jar:system/framework/qcom.fmradio.jar \
-    vendor/vodafone/p839v55/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/vodafone/p839v55/proprietary/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
     vendor/vodafone/p839v55/proprietary/lib/hw/camera.msm8916.so:system/lib/hw/camera.msm8916.so \
     vendor/vodafone/p839v55/proprietary/lib/hw/lights.msm8916.so:system/lib/hw/lights.msm8916.so \
     vendor/vodafone/p839v55/proprietary/lib/hw/nfc_nci.pn54x.default.so:system/lib/hw/nfc_nci.pn54x.default.so \
-    vendor/vodafone/p839v55/proprietary/lib/modules/radio-iris-transport.ko:system/lib/modules/radio-iris-transport.ko \
-    vendor/vodafone/p839v55/proprietary/lib/modules/wlan.ko:system/lib/modules/wlan.ko \
     vendor/vodafone/p839v55/proprietary/lib/libalRnB.so:system/lib/libalRnB.so \
     vendor/vodafone/p839v55/proprietary/lib/libalSDE2.so:system/lib/libalSDE2.so \
     vendor/vodafone/p839v55/proprietary/lib/libaltek_post_jni.so:system/lib/libaltek_post_jni.so \
@@ -804,7 +822,6 @@ PRODUCT_COPY_FILES += \
     vendor/vodafone/p839v55/proprietary/lib/libGPU_post_jni.so:system/lib/libGPU_post_jni.so \
     vendor/vodafone/p839v55/proprietary/lib/libImageProcess_jni.so:system/lib/libImageProcess_jni.so \
     vendor/vodafone/p839v55/proprietary/lib/libjpeg_encode_hw_jni.so:system/lib/libjpeg_encode_hw_jni.so \
-    vendor/vodafone/p839v55/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     vendor/vodafone/p839v55/proprietary/lib/libloc_core.so:system/lib/libloc_core.so \
     vendor/vodafone/p839v55/proprietary/lib/libloc_eng.so:system/lib/libloc_eng.so \
     vendor/vodafone/p839v55/proprietary/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
@@ -827,12 +844,29 @@ PRODUCT_COPY_FILES += \
     vendor/vodafone/p839v55/proprietary/lib/libwifi-hal-qcom.so:system/lib/libwifi-hal-qcom.so \
     vendor/vodafone/p839v55/proprietary/lib/libzte_zcoredevice.so:system/lib/libzte_zcoredevice.so \
     vendor/vodafone/p839v55/proprietary/lib/libzte_zcore.so:system/lib/libzte_zcore.so \
-    vendor/vodafone/p839v55/proprietary/lib/modules/pronto/pronto_wlan.ko:system/lib/modules/pronto/pronto_wlan.ko \
-    vendor/vodafone/p839v55/proprietary/priv-app/com.qualcomm.location:system/priv-app/com.qualcomm.location \
-    vendor/vodafone/p839v55/proprietary/priv-app/com.qualcomm.location/com.qualcomm.location.apk:system/priv-app/com.qualcomm.location/com.qualcomm.location.apk \
     vendor/vodafone/p839v55/proprietary/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
     vendor/vodafone/p839v55/proprietary/etc/sensors/hals.conf:system/etc/sensors/hals.conf \
     vendor/vodafone/p839v55/proprietary/vendor/etc/calib_v55.cfg:system/vendor/etc/calib_v55.cfg \
     vendor/vodafone/p839v55/proprietary/vendor/etc/calmodule.cfg:system/vendor/etc/calmodule.cfg \
     vendor/vodafone/p839v55/proprietary/vendor/lib/libcalmodule_akm.so:system/vendor/lib/libcalmodule_akm.so \
     vendor/vodafone/p839v55/proprietary/vendor/lib/libcalmodule_common.so:system/vendor/lib/libcalmodule_common.so \
+    vendor/vodafone/p839v55/proprietary/etc/cne:system/etc/cne \
+    vendor/vodafone/p839v55/proprietary/etc/cne/andsfCne.xml:system/etc/cne/andsfCne.xml \
+    vendor/vodafone/p839v55/proprietary/etc/cne/SwimConfig.xml:system/etc/cne/SwimConfig.xml \
+    vendor/vodafone/p839v55/proprietary/etc/cne/wqeclient:system/etc/cne/wqeclient \
+    vendor/vodafone/p839v55/proprietary/etc/cne/wqeclient/profile1.xml:system/etc/cne/wqeclient/profile1.xml \
+    vendor/vodafone/p839v55/proprietary/etc/cne/wqeclient/profile2.xml:system/etc/cne/wqeclient/profile2.xml \
+    vendor/vodafone/p839v55/proprietary/etc/cne/wqeclient/profile3.xml:system/etc/cne/wqeclient/profile3.xml \
+    vendor/vodafone/p839v55/proprietary/etc/cne/wqeclient/profile4.xml:system/etc/cne/wqeclient/profile4.xml \
+    vendor/vodafone/p839v55/proprietary/etc/cne/wqeclient/profile5.xml:system/etc/cne/wqeclient/profile5.xml \
+    
+    PRODUCT_PACKAGES += \
+    libloc_api_v02 \
+    libloc_ds_api \
+    libtime_genoff \
+    TimeService \
+    CNEService \
+    com.qualcomm.location \
+    com.qualcomm.location.ext \
+    qcnvitems \
+    qcrilhook
